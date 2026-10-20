@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KickOff Hub - European Football Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">⚽ KickOff<span>Hub</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Live & Matches</a></li>
+            <li class="nav-item"><a class="nav-link" href="standings.html">Standings</a></li>
+            <li class="nav-item"><a class="nav-link" href="teams.html">Clubs Inspector</a></li>
+            <li class="nav-item"><a class="nav-link" href="tickets.html">Get Tickets</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://www.uefa.com/uefachampionsleague/" target="_blank">UCL ↗</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero-banner text-center">
+    <div class="container">
+      <span class="pulse-badge mb-3">● TOP 5 LEAGUES & UCL TRACKER</span>
+      <h1 class="display-4 fw-bold">Live Scores & Match Centre</h1>
+      <p class="text-muted lead">Real-time updates across Premier League, La Liga, Serie A, Bundesliga, Ligue 1 & UEFA Champions League.</p>
+      
+      <div class="row justify-content-center mt-4">
+        <div class="col-md-6">
+          <input type="text" id="searchInput" class="form-control form-control-lg" placeholder="Search clubs, leagues or fixtures (e.g. Real Madrid, UCL)...">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container my-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="h4 border-start border-4 border-success ps-3 mb-0">Featured Matches Today</h2>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-sm btn-outline-secondary text-light active" onclick="filterMatches('ALL')">All</button>
+        <button type="button" class="btn btn-sm btn-outline-secondary text-light" onclick="filterMatches('LIVE')">Live Only</button>
+      </div>
+    </div>
+
+    <!-- Live Matches Grid -->
+    <div class="row g-4" id="matches-container">
+      <!-- Generated via JS -->
+    </div>
+
+    <!-- Match Highlights & Media -->
+    <section class="my-5">
+      <h2 class="h4 border-start border-4 border-success ps-3 mb-4">Champions League & League Highlights</h2>
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <div class="glass-card p-0 overflow-hidden shadow">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube.com/watch?v=DLOUfAVwuXA" title="Match Highlights" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="glass-card h-100 d-flex flex-column justify-content-center">
+            <h5>🎙️ Match Radio Commentary</h5>
+            <p class="small text-muted mb-4">Stream live audio commentary for UCL matchday features.</p>
+            <audio controls class="w-100">
+              <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+              Your browser does not support audio elements.
+            </audio>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-4 text-center text-muted">
+    <div class="container">
+      <p class="mb-0">&copy; 2026 KickOff Hub App. All Top 5 Leagues & Champions League Data Integrated.</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
