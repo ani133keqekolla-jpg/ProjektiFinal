@@ -32,8 +32,9 @@
       <header class="topbar">
         <a class="mobile-brand" href="index.html"><span class="brand-icon">C</span><b>Court<span class="accent">Score</span></b></a>
         <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Kërko ekip ose ligë..."></label>
-        <button id="refreshButton" class="icon-button" title="Rifresko">↻</button>
-      </header>
+        <button id="refreshButton" class="btn btn-success" title="Rifresko">
+         ↻ Rifresko
+        </button>
       <section class="hero">
         <div class="eyebrow"><span class="pulse-dot"></span> QËNDRO NË LOJË</div>
         <h1>Sporti yt.<br><span class="accent">Momenti yt.</span></h1>
@@ -62,6 +63,13 @@
       <footer class="footer">CourtScore <span>•</span> Sporti nuk ndalet.</footer>
     </main>
   </div>
+  <script>
+    $(document).ready(function () {
+        $("#refreshButton").click(function () {
+            $("#homeMatches").fadeOut(200).fadeIn(200);
+        });
+    });
+  </script>
 </body>
 </html>
 
